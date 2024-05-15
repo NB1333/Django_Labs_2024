@@ -1,0 +1,10 @@
+<!-- templates/list_users.html -->
+
+<h2>Users</h2>
+<a href="{% url 'list_transactions' %}">Manage Transactions</a>
+<ul>
+    {% for user in users %}
+    <li>{{ user.name }} - <a href="{% url 'read_user' user.id %}">View</a></li>
+    {% endfor %}
+</ul>
+<a href="{% url 'create_user' %}">Create a new user</a>

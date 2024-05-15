@@ -1,0 +1,15 @@
+<h2>Transactions</h2>
+<a href="{% url 'add_transaction' %}">Add Transaction</a>
+<ul>
+    {% for transaction in transactions %}
+    <li>
+        User {{ transaction.user_id }} bought or sold {{ transaction.amount }} dollars
+        <a href="{% url 'edit_transaction' transaction.id %}">Edit</a>
+        <form method="post" action="{% url 'delete_transaction' transaction.id %}" style="display: inline;">
+            {% csrf_token %}
+            <button type="submit">Delete</button>
+        </form>
+    </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'list_users' %}">Back to User List</a>

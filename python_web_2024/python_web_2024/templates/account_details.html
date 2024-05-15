@@ -1,0 +1,29 @@
+<!-- account_details.html -->
+<h2>Account Details</h2>
+<p>Balance in UAH: {{ account.balance_uah }}</p>
+<p>Balance in USD: {{ account.balance_usd }}</p>
+
+<h3>Deposit Money</h3>
+<form method="post" action="{% url 'deposit_money' account.id %}">
+    {% csrf_token %}
+    <input type="number" name="amount" required>
+    <select name="currency">
+        <option value="uah">UAH</option>
+        <option value="usd">USD</option>
+    </select>
+    <button type="submit">Deposit</button>
+</form>
+
+<h3>Exchange Money</h3>
+<form method="post" action="{% url 'exchange_money' account.id %}">
+    {% csrf_token %}
+    <input type="number" name="amount" required>
+    <select name="direction">
+        <option value="uah_to_usd">UAH to USD</option>
+        <option value="usd_to_uah">USD to UAH</option>
+    </select>
+    <button type="submit">Exchange</button>
+</form>
+
+<a href="{% url 'list_users' %}">Back to User List</a>
+

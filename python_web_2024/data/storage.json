@@ -1,0 +1,45 @@
+{
+    "users": [
+        {
+            "id": "2",
+            "name": "nikita"
+        },
+        {
+            "id": "3",
+            "name": "VALERA JAVASCRIPT"
+        }
+    ],
+    "accounts": [
+        {
+            "id": "101",
+            "user_id": "1",
+            "balance_uah": 1200.0,
+            "balance_usd": 50.0
+        },
+        {
+            "id": null,
+            "user_id": "1",
+            "balance_uah": 0,
+            "balance_usd": 0
+        },
+        {
+            "id": "3",
+            "user_id": "1",
+            "balance_uah": 0,
+            "balance_usd": 0
+        },
+        {
+            "id": "4",
+            "user_id": "2",
+            "balance_uah": -1500.0,
+            "balance_usd": 87.5
+        },
+        {
+            "id": "5",
+            "user_id": "3",
+            "balance_uah": 1560.0,
+            "balance_usd": 213.0
+        }
+    ],
+    "transactions": []
+}

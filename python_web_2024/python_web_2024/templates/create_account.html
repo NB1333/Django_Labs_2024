@@ -1,0 +1,6 @@
+<h2>Create Account for User ID: {{ user_id }}</h2>
+<form method="post" action="">
+    {% csrf_token %}
+    <button type="submit">Create Account</button>
+</form>
+<a href="{% url 'read_user' user_id %}">Back to User Details</a>
